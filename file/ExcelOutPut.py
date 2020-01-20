@@ -2,11 +2,10 @@
 import time
 
 import xlsxwriter
-import json
 
 
 def insert2Excel(jsonArray):
-    workbook = xlsxwriter.Workbook('/Users/zhangxiangwei/PycharmProjects/HelloWorld/Test.xlsx')  # 创建一个Excel文件
+    workbook = xlsxwriter.Workbook('/Test.xlsx')  # 创建一个Excel文件
     worksheet = workbook.add_worksheet()  # 创建一个sheet
     title = [U'$screen_name', U'$element_selector', U'$element_type', U'$element_content']  # 表格title
     worksheet.write_row('A1', title)  # title 写入Excel

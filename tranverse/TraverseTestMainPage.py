@@ -1,12 +1,12 @@
 # coding:utf-8
 import sys
 
-from FindJson import parseJson
+from tranverse import TraverseEles
 
 curDir = sys.path[0]
 sys.path.append(curDir + '/common')
-import Common
-import TraverseEles
+from file import Common
+
 import unittest
 from time import sleep
 

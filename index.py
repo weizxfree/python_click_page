@@ -4,8 +4,8 @@
 import subprocess
 import time
 
-from FindJson import parseJson
-from startTest import start
+from file.FindJson import parseJson
+from tranverse.startTest import start
 
 testdir = "/Users/zhangxiangwei/PycharmProjects/HelloWorld/log/"
 

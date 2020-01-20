@@ -2,12 +2,12 @@
 import os
 import json
 
-from ExcelOutPut import insert2Excel
+from file.ExcelOutPut import insert2Excel
 
 text_str = ''
 judg_list = []
 
-dir = "/Users/zhangxiangwei/PycharmProjects/HelloWorld/log/"
+dir = "/log/"
 
 
 def findJson(file_path):

@@ -1,15 +1,7 @@
 # coding: utf-8
-import os
 import subprocess
-import sys
-import platform
 
-import commands
 from appium import webdriver
-
-
-# 初始化操作
-
 
 def setUp(params):
     desired_caps = {}
@@ -79,25 +71,3 @@ def excuteFailed(info):
     raise Exception(info)
 
 
-# 截取错误截图，并保存到相应的文件夹
-def cutScreenShot(picName, params):
-    if (os.path.exists("errorScreenShot")):
-        pass
-    else:
-        os.makedirs("errorScreenShot")
-
-    if (platform.system() == "Darwin"):
-        filePath = os.getcwd()
-    elif (platform.system() == "Windows"):
-        filePath = os.path.split(os.path.realpath(sys.argv[0]))[0]  # 获取当前脚本路径
-    else:
-        filePath = os.path.split(os.path.realpath(sys.argv[0]))[0]  # 获取当前脚本路径
-
-    if (platform.system() == "Darwin"):
-        fileName = filePath + "/errorScreenShot/" + picName + ".png"  # 将用例方法名作为图片名
-    elif (platform.system() == "Windows"):
-        fileName = filePath + "\\errorScreenShot\\" + picName + ".png"  # 将用例方法名作为图片名
-    else:
-        fileName = filePath + "\\errorScreenShot\\" + picName + ".png"  # 将用例方法名作为图片名
-
-    params.driver.get_screenshot_as_file(fileName)
